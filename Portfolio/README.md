@@ -13,3 +13,5 @@ Pour sa réalisation, j'ai utilisé des langages web standards :
 - Sections distinctes : À propos, Compétences, Passion, Formation, Expérience, Projets, Contact  
 - Formulaire de contact fonctionnel via Web3Forms  
 - Effets visuels sur cartes projets et timeline pour une meilleure UX  
+
+## 
