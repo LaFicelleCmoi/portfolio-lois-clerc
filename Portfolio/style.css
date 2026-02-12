@@ -128,13 +128,43 @@ body.no-scroll {
   overflow: hidden;
 }
 
-/* === Optionnel : effet de fondu du contenu principal quand menu ouvert === */
 body.no-scroll main,
 body.no-scroll section {
   filter: blur(2px);
   transition: filter 0.3s ease;
 }
 
+/* ====== COMPÉTENCES ====== */
+.skills-list {
+  list-style: none; 
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+}
+
+.skills-list li {
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; 
+  background-color: rgba(255, 255, 255, 0.05); 
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.skills-list img {
+  width: 40px; 
+  height: 40px;
+  object-fit: contain; 
+  display: block; 
+}
+
+
+.skills-list li img + img {
+  margin-left: 5px; 
+}
 /* ====== SECTIONS ====== */
 section {
   max-width: 1200px;
@@ -157,9 +187,9 @@ section:hover {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 3px solid var(--jaune-ferrari);
+  border: none; 
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(255, 214, 10, 0.5);
+  box-shadow: none; 
 }
 
 .about {
@@ -174,10 +204,9 @@ section:hover {
 .logo-ferrari {
   border: none !important;
   border-radius: 0 !important;
-  width: 10px;
+  width: 30px;
   height: auto;
   object-fit: contain;
-  vertical-align: middle;
   vertical-align: middle;
   margin: 6px;
 }
@@ -199,19 +228,6 @@ section:hover {
 .forms:hover {
   transform: scale(1.1);
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
-}
-/* ====== EXPERIENCE SCROLL ====== */
-.scroll-container {
-  width: 100%;
-  height: 390px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-
-.scroll-page {
-  display: flex;
-  height: 100%;
-  font-size: 5em;
 }
 
 /* ====== FORMULAIRE ====== */
@@ -278,7 +294,7 @@ footer {
   background-color: var(--rouge-ferrari);
   border: none;
   color: var(--blanc);
-  border-radius: none !important;
+  border-radius: 0 !important;
   width: 60px;
   height: 60px;
   cursor: pointer;
@@ -339,6 +355,7 @@ footer {
     height: 40px;
   }
 }
+
 /* ====== LIENS ====== */
 a {
   color: var(--jaune-ferrari);
@@ -357,4 +374,4 @@ a.project-card {
 a:hover {
   color: var(--rouge-ferrari);
   text-decoration: underline;
-};
+}

@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = navMenu.querySelectorAll("a[href^='#']");
   const backToTopButton = document.getElementById("backToTop");
 
-  // === 1. MENU BURGER (overlay) ===
-  burger.addEventListener("click", () => {
+ // === 1. MENU BURGER (overlay) ===
+  burger.addEventListener("click", (e) => { 
+    e.preventDefault(); 
+    
     navMenu.classList.toggle("open");
     burger.classList.toggle("active");
     document.body.classList.toggle("no-scroll");
@@ -22,9 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
       burger.classList.remove("active");
       document.body.classList.remove("no-scroll");
 
-      setTimeout(() => {
-        if (target) target.scrollIntoView({ behavior: "smooth" });
-      }, 250);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 250);
+      }
     });
   });
 
